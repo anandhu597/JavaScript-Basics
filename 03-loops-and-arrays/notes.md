@@ -1,5 +1,3 @@
-Here is a **short, clean version** filled for your task 👇
-
 ## 📂 Task: camelize
 
 **Objective:** Convert dash-separated strings into camelCase.
@@ -31,4 +29,27 @@ function camelize(str) {
 
 ```javascript
 const filterRange = (arr, a, b) => arr.filter((num) => num >= a && num <= b);
+```
+
+---
+
+## 📂 Task: Filter Range In Place
+
+**Objective:** Modify the EXISTING array to remove values outside range [a, b].
+**Toolbox:** `for` loop, `.splice()`, `i--` (Mutating)
+
+### 💻 Solution
+
+```javascript
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i];
+
+    // Check if value is OUTSIDE the range
+    if (val < a || val > b) {
+      arr.splice(i, 1); // Remove 1 element at current index
+      i--; // Backtrack index to account for the shift
+    }
+  }
+}
 ```

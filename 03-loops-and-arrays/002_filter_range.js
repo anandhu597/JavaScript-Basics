@@ -5,16 +5,19 @@
  */
 
 // --- 1. RESEARCH & EXPERIMENTS ---
-// Use this space to test small snippets of the methods you found in the docs.
-// Example: console.log("Test: ", "apple-pie".split("-"));
 
 //Essential Array Method:
 //filter() to filter  many, we can use arr.filter(fn).
 
-`let results = arr.filter(function (item, index, array) {
-  // if true item is pushed to results and the iteration continues
-  // returns empty array if nothing found
-});`;
+// let results = arr.filter(function (item, index, array) {
+// if true item is pushed to results and the iteration continues
+// returns empty array if nothing found
+// });
+
+let numbers = [10, 20, 30, 40];
+let filtered = numbers.filter((n) => n > 25);
+console.log("Original stays same:", numbers); // [10, 20, 30, 40]
+console.log("New array created:", filtered); // [30, 40]
 
 // Examples
 
@@ -28,20 +31,20 @@ let sumUsers = users.filter((item) => item.id < 3);
 console.log(sumUsers);
 
 // --- 2. LOGIC PLAN (Pseudocode) ---
+
 /**
- * 1. [First step in plain English]
- * 2. [Next step...]
- * 3. [Final transformation/return]
+ * 1. Receive the array 'arr' and the range limits 'a' and 'b'.
+ * 2. Use .filter() to look at every 'item'.
+ * 3. Keep the item if it is >= a AND <= b.
+ * 4. Return the new filtered array.
  */
-//
-`
-FUNCTION filterRangefilterRange
 
-  RETURN   arr.FILTER(item => item >= a AND item <= b)
-
-END FUNCTION
-
-`;
+/**
+ * FUNCTION filterRangefilterRange
+ *   RETURN   arr.FILTER(item => item >= a AND item <= b)
+ * END FUNCTION
+ *
+ */
 
 // --- 3. SOLUTION ---
 function filterRangeInPlace(arr, a, b) {
