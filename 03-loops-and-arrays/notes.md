@@ -53,3 +53,19 @@ function filterRangeInPlace(arr, a, b) {
   }
 }
 ```
+
+## 📂 Task: Copy and Sort Array
+
+**Objective:** Create a sorted version of an array while keeping the original array unmodified.
+**Strategy:** Create a shallow copy of the array first (so the original isn't changed), then use `.sort()` on that copy.
+
+**Toolbox:** `Spread operator [...]` or `slice()`, `sort()`
+
+### 💻 Solution
+
+```javascript
+function copySorted(arr) {
+  // Use spread to create a copy, then sort the copy
+  return [...arr].sort();
+}
+```
